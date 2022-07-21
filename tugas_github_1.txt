@@ -1,0 +1,162 @@
+TKJ@DESKTOP-84NGV0C MINGW64 ~ (master)
+$ mkdir git-basic
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~ (master)
+$ cd git-basic
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic (master)
+$ touch first.txt
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic (master)
+$ dir
+first.txt
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic (master)
+$ git init
+Initialized empty Git repository in C:/Users/TKJ/git-basic/.git/
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic (master)
+$ ls -a
+./  ../  .git/  first.txt
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        first.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic (master)
+$ git add .
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   first.txt
+
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic (master)
+$ git commit -m "adding first.txt"
+[master (root-commit) ebd0977] adding first.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 first.txt
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic (master)
+$ git log
+commit ebd0977497315c0532d97b667c2738e48ab64f23 (HEAD -> master)
+Author: 1tiara <nurfadhilahmutiara@gmail.com>
+Date:   Thu Jul 21 12:10:39 2022 +0700
+
+    adding first.txt
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic (master)
+$ touch second.txt
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        second.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic (master)
+$ git add .
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   second.txt
+
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic (master)
+$ git commit -m "adding second.txt"
+[master 9022c1c] adding second.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 second.txt
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic (master)
+$ git log
+commit 9022c1c7002931878b062818b3d67164f68724ad (HEAD -> master)
+Author: 1tiara <nurfadhilahmutiara@gmail.com>
+Date:   Thu Jul 21 12:12:06 2022 +0700
+
+    adding second.txt
+
+commit ebd0977497315c0532d97b667c2738e48ab64f23
+Author: 1tiara <nurfadhilahmutiara@gmail.com>
+Date:   Thu Jul 21 12:10:39 2022 +0700
+
+    adding first.txt
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic (master)
+$ rm first.txt
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    first.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic (master)
+$ git add .
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    first.txt
+
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic (master)
+$ git commit -m "removing first.txt"
+[master efaefad] removing first.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 first.txt
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic (master)
+$ git log
+commit efaefad863b2f02f97816a4dba4e9b6b2d6b2c82 (HEAD -> master)
+Author: 1tiara <nurfadhilahmutiara@gmail.com>
+Date:   Thu Jul 21 12:13:00 2022 +0700
+
+    removing first.txt
+
+commit 9022c1c7002931878b062818b3d67164f68724ad
+Author: 1tiara <nurfadhilahmutiara@gmail.com>
+Date:   Thu Jul 21 12:12:06 2022 +0700
+
+    adding second.txt
+
+commit ebd0977497315c0532d97b667c2738e48ab64f23
+Author: 1tiara <nurfadhilahmutiara@gmail.com>
+Date:   Thu Jul 21 12:10:39 2022 +0700
+
+    adding first.txt
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic (master)
+$ dir
+second.txt
