@@ -1,0 +1,291 @@
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic (master)
+$ mkdir mutiara
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic (master)
+$ cd mutiara
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (master)
+$ pwd
+/c/Users/TKJ/git-basic/mutiara
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (master)
+$ touch README.md
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ./
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (master)
+$ dir
+README.md
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ./
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (master)
+$ git add .
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   README.md
+
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (master)
+$ git commit -m "halo perkenalkan aku halaman utama"
+[master 8c85109] halo perkenalkan aku halaman utama
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 mutiara/README.md
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (master)
+$ git log
+commit 8c8510900c5cd42ce03cdc241a5df37691cd57e1 (HEAD -> master)
+Author: 1tiara <nurfadhilahmutiara@gmail.com>
+Date:   Thu Jul 21 12:15:27 2022 +0700
+
+    halo perkenalkan aku halaman utama
+
+commit efaefad863b2f02f97816a4dba4e9b6b2d6b2c82
+Author: 1tiara <nurfadhilahmutiara@gmail.com>
+Date:   Thu Jul 21 12:13:00 2022 +0700
+
+    removing first.txt
+
+commit 9022c1c7002931878b062818b3d67164f68724ad
+Author: 1tiara <nurfadhilahmutiara@gmail.com>
+Date:   Thu Jul 21 12:12:06 2022 +0700
+
+    adding second.txt
+
+commit ebd0977497315c0532d97b667c2738e48ab64f23
+Author: 1tiara <nurfadhilahmutiara@gmail.com>
+Date:   Thu Jul 21 12:10:39 2022 +0700
+
+    adding first.txt
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (master)
+$ echo halo perkenalkan aku halaman utama > README.md
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (master)
+$ git add .
+warning: LF will be replaced by CRLF in mutiara/README.md.
+The file will have its original line endings in your working directory
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (master)
+$ git commit -m "first commit"
+[master 9e4a7ea] first commit
+ 1 file changed, 1 insertion(+)
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (master)
+$ cat README.md
+Hello world
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (master)
+$ git checkout README.md
+Updated 1 path from the index
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (master)
+$ cat README.md
+halo perkenalkan aku halaman utama
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (master)
+$ git branch cv
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (master)
+$ git branch
+  cv
+* master
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (master)
+$ git checkout cv
+Switched to branch 'cv'
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (cv)
+$ touch cv.txt
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (cv)
+$ echo ini adalah file cv > cv.txt
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (cv)
+$ cat cv.txt
+ini adalah file cv
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (cv)
+$ git status
+On branch cv
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        cv.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (cv)
+$ git add .
+warning: LF will be replaced by CRLF in mutiara/cv.txt.
+The file will have its original line endings in your working directory
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (cv)
+$ git commit -m "Initial CV"
+[cv f018942] Initial CV
+ 1 file changed, 1 insertion(+)
+ create mode 100644 mutiara/cv.txt
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (cv)
+$ git add .
+warning: LF will be replaced by CRLF in mutiara/cv.txt.
+The file will have its original line endings in your working directory
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (cv)
+$ git commit -m "SUMSANG"
+[cv eb40ba0] SUMSANG
+ 1 file changed, 1 insertion(+)
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (cv)
+$ git add .
+warning: LF will be replaced by CRLF in mutiara/cv.txt.
+The file will have its original line endings in your working directory
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (cv)
+$ git commit -m "DDALL"
+[cv 5c6a45b] DDALL
+ 1 file changed, 1 insertion(+)
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (cv)
+$ git add .
+warning: LF will be replaced by CRLF in mutiara/cv.txt.
+The file will have its original line endings in your working directory
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (cv)
+$ git commit -m "CORQ"
+[cv de44f73] CORQ
+ 1 file changed, 1 insertion(+)
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (cv)
+$ git checkout master
+Switched to branch 'master'
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (master)
+$ git add .
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (master)
+$ git commit -m "update master pertama"
+[master e8189c3] update master pertama
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (master)
+$ git log
+commit e8189c3000b582a26c863a7a242c4f808b3a2172 (HEAD -> master)
+Author: 1tiara <nurfadhilahmutiara@gmail.com>
+Date:   Thu Jul 21 12:31:14 2022 +0700
+
+    update master pertama
+
+commit 9e4a7eabffe6377c12a44cb7cf5999768e46158d
+Author: 1tiara <nurfadhilahmutiara@gmail.com>
+Date:   Thu Jul 21 12:19:44 2022 +0700
+
+    first commit
+
+commit 8c8510900c5cd42ce03cdc241a5df37691cd57e1
+Author: 1tiara <nurfadhilahmutiara@gmail.com>
+Date:   Thu Jul 21 12:15:27 2022 +0700
+
+    halo perkenalkan aku halaman utama
+
+commit efaefad863b2f02f97816a4dba4e9b6b2d6b2c82
+Author: 1tiara <nurfadhilahmutiara@gmail.com>
+Date:   Thu Jul 21 12:13:00 2022 +0700
+
+    removing first.txt
+
+commit 9022c1c7002931878b062818b3d67164f68724ad
+Author: 1tiara <nurfadhilahmutiara@gmail.com>
+Date:   Thu Jul 21 12:12:06 2022 +0700
+
+    adding second.txt
+
+commit ebd0977497315c0532d97b667c2738e48ab64f23
+Author: 1tiara <nurfadhilahmutiara@gmail.com>
+Date:   Thu Jul 21 12:10:39 2022 +0700
+
+    adding first.txt
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (master)
+$ git merge cv
+Merge made by the 'ort' strategy.
+ mutiara/cv.txt | 4 ++++
+ 1 file changed, 4 insertions(+)
+ create mode 100644 mutiara/cv.txt
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (master)
+$ dir
+cv.txt  README.md
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (master)
+$ git log --graph
+*   commit 6d63e4047533ede0fe1e7e08438f371c8d808a0c (HEAD -> master)
+|\  Merge: e8189c3 de44f73
+| | Author: 1tiara <nurfadhilahmutiara@gmail.com>
+| | Date:   Thu Jul 21 12:32:36 2022 +0700
+| |
+| |     Merge branch 'cv'
+| |
+| * commit de44f731383e30e2255876e725ed10cdf062e4ef (cv)
+| | Author: 1tiara <nurfadhilahmutiara@gmail.com>
+| | Date:   Thu Jul 21 12:28:44 2022 +0700
+| |
+| |     CORQ
+| |
+| * commit 5c6a45b7f7df0dbb7b5ef12862e055bc39cc4c85
+| | Author: 1tiara <nurfadhilahmutiara@gmail.com>
+| | Date:   Thu Jul 21 12:28:04 2022 +0700
+| |
+| |     DDALL
+| |
+| * commit eb40ba0db957268eb095db182d167ee418686ad1
+| | Author: 1tiara <nurfadhilahmutiara@gmail.com>
+| | Date:   Thu Jul 21 12:27:13 2022 +0700
+| |
+| |     SUMSANG
+| |
+| * commit f0189429d20ebe914cb2997e540d188f548ee13d
+| | Author: 1tiara <nurfadhilahmutiara@gmail.com>
+| | Date:   Thu Jul 21 12:25:02 2022 +0700
+| |
+| |     Initial CV
+| |
+* | commit e8189c3000b582a26c863a7a242c4f808b3a2172
+|/  Author: 1tiara <nurfadhilahmutiara@gmail.com>
+|   Date:   Thu Jul 21 12:31:14 2022 +0700
+|
+|       update master pertama
+|
+* commit 9e4a7eabffe6377c12a44cb7cf5999768e46158d
+| Author: 1tiara <nurfadhilahmutiara@gmail.com>
+| Date:   Thu Jul 21 12:19:44 2022 +0700
+|
+|     first commit
+
+TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic/mutiara (master)
+$
