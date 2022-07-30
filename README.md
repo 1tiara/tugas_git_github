@@ -1,3 +1,3 @@
-Halo perkenalkan aku halaman utama
+alo perkenalkan aku halaman utama
 
-Ini adalah update pertama pada branch
+ini adalah update pertama pada branch
