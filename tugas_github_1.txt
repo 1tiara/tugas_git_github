@@ -105,6 +105,7 @@ commit ebd0977497315c0532d97b667c2738e48ab64f23
 Author: 1tiara <nurfadhilahmutiara@gmail.com>
 Date:   Thu Jul 21 12:10:39 2022 +0700
 
+
     adding first.txt
 
 TKJ@DESKTOP-84NGV0C MINGW64 ~/git-basic (master)
